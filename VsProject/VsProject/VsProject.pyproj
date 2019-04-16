@@ -4,13 +4,16 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>b58b5682-24a6-47a8-a49a-807a1c59ed50</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>VsProject.py</StartupFile>
+    <StartupFile>atari.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
     <OutputPath>.</OutputPath>
     <Name>VsProject</Name>
     <RootNamespace>VsProject</RootNamespace>
+    <LaunchProvider>Standard Python launcher</LaunchProvider>
+    <CommandLineArguments>-g Breakout -r True</CommandLineArguments>
+    <EnableNativeCodeDebugging>False</EnableNativeCodeDebugging>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
@@ -21,7 +24,18 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="atari.py" />
+    <Compile Include="convolutional_neural_network.py" />
+    <Compile Include="game_models\base_game_model.py" />
+    <Compile Include="game_models\ddqn_game_model.py" />
+    <Compile Include="game_models\ge_game_model.py" />
+    <Compile Include="game_models\__init__.py" />
+    <Compile Include="gym_wrappers.py" />
+    <Compile Include="logger.py" />
     <Compile Include="VsProject.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="game_models\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
