@@ -12,7 +12,7 @@
     <Name>VsProject</Name>
     <RootNamespace>VsProject</RootNamespace>
     <LaunchProvider>Standard Python launcher</LaunchProvider>
-    <CommandLineArguments>-g Breakout -r True</CommandLineArguments>
+    <CommandLineArguments>--help</CommandLineArguments>
     <EnableNativeCodeDebugging>False</EnableNativeCodeDebugging>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
